@@ -50,6 +50,6 @@ function generate($sqlData){
 }
 
 
-$cs = (new conversion('test.sql'))->handleStructure();
+$cs = (new conversion('../test.sql'))->handleStructure();
 
 generate($cs);
