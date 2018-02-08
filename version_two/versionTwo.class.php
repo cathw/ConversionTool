@@ -89,6 +89,8 @@ class versionTwo
                 $fieldArr['_pk'] = $res[1];
             }else if(preg_match('/UNIQUE KEY/',$field)){
                 $fieldArr['_unique'] = $res[1];
+            }else if(preg_match('/KEY/', $field)){
+                continue;
             }else{
                 $fieldArr[@$res[1]] = $this->checkFieldType($field);
             }
